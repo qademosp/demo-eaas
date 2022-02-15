@@ -1,28 +1,28 @@
 version: "3.9"
     
 services:
-  dbT:
+  db:
     imageT: mysql:5.7
-    commandT: --ignore-db-dir=lost+found
-    portsT:
+    command: --ignore-db-dir=lost+found
+    ports:
       - 3306
-    volumesT:
+    volumes:
       - db_data:/var/lib/mysql
     restartT: always
-    environmentT:
+    environment:
       MYSQL_ROOT_PASSWORD: somewordpress
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
     
-  myappT:
-    depends_onT:
+  myapp:
+    depends_on:
       - db5
-    buildT:
+    build:
       contextT: ./
-    portsT:
+    ports:
       - "8000:80"
-    restartT: always
+    restart: always
 
 volumes:
   db_data: {}
