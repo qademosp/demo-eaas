@@ -1,6 +1,6 @@
 version: "3.9"
     
-services:
+servicesT:
   dbT:
     imageT: mysql:5.7
     commandT: --ignore-db-dir=lost+found
