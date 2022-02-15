@@ -8,7 +8,7 @@ services:
       - 3306
     volumes:
       - db_data:/var/lib/mysql
-    restart: 
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
       MYSQL_DATABASE: wordpress
@@ -17,7 +17,7 @@ services:
     
   myapp:
     depends_on:
-      - db34
+      - db5
     build:
       context: ./
     ports:
