@@ -1,6 +1,6 @@
 version: "3.9"
     
-servicestt:
+services:
   db:
     image: mysql:5.7
     command: --ignore-db-dir=lost+found
@@ -17,7 +17,7 @@ servicestt:
     
   myapp:
     depends_on:
-      - db
+      - db34
     build:
       context: ./
     ports:
