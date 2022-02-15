@@ -4,7 +4,7 @@ services:
   db:
     image: mysql:5.7
     command: --ignore-db-dir=lost+found
-    portsT:
+    ports:
       - 3306
     volumesT:
       - db_data:/var/lib/mysql
@@ -18,7 +18,7 @@ services:
   myapp:
     depends_on:
       - db5
-    buildT:
+    build:
       context: ./
     ports:
       - "8000:80"
