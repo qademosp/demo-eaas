@@ -16,7 +16,7 @@ services:
       MYSQL_PASSWORD: wordpress
     
   myapp:
-    depends_on:
+    depends_on::
       - db5
     build:
       context: ./
