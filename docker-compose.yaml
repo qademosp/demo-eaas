@@ -1,6 +1,6 @@
 version: "3.9"
     
-services::
+services:
   dbT:
     imageT: mysql:5.7
     commandT: --ignore-db-dir=lost+found
@@ -25,4 +25,4 @@ services::
     restartT: always
 
 volumes:
-  db_dataT: {}
+  db_data: {}
