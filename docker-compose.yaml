@@ -6,7 +6,7 @@ services:
     command: --ignore-db-dir=lost+found
     ports:
       - 3306
-    volumesXXX:
+    volumes:
       - db_data:/var/lib/mysql
     restart: always
     environment:
