@@ -1,12 +1,12 @@
 version: "3.9"
     
 services:
-  db:
+  db4:
     image: mysql:5.7
     command: --ignore-db-dir=lost+found
     ports:
       - 3306
-    volumesT:
+    volumes:
       - db_data:/var/lib/mysql
     restartT: always
     environment:
