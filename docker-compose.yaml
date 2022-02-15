@@ -16,8 +16,8 @@ services:
       MYSQL_PASSWORD: wordpress
     
   myapp:
-    depends_on::
-      - db5
+    depends_on:
+      - db
     build:
       context: ./
     ports:
